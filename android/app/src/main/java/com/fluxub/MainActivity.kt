@@ -84,4 +84,23 @@ class MainActivity : AppCompatActivity() {
         }
         servicioActivo = true
         actualizarUI()
-        Toast.make
+        Toast.makeText(this, "✅ Servicio iniciado", Toast.LENGTH_SHORT).show()
+        
+        // Cerrar la app (el servicio queda en segundo plano)
+        finish()
+    }
+    
+    private fun actualizarUI() {
+        if (servicioActivo) {
+            btnIniciar.text = "⏹️ Detener"
+            btnIniciar.setBackgroundColor(getColor(R.color.red))
+            txtEstado.text = "🟢 Servicio activo"
+            txtEstado.setTextColor(getColor(R.color.green))
+        } else {
+            btnIniciar.text = "▶️ Iniciar"
+            btnIniciar.setBackgroundColor(getColor(R.color.green))
+            txtEstado.text = "🔴 Servicio inactivo"
+            txtEstado.setTextColor(getColor(R.color.red))
+        }
+    }
+}
