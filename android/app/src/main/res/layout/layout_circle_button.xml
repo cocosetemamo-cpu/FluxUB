@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/circle_background"
+    android:elevation="12dp">
+
+    <ImageView
+        android:id="@+id/circleButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_fluxub"
+        android:padding="12dp"
+        android:background="@drawable/circle_ripple"
+        android:colorFilter="#F44336" />
+
+</FrameLayout>
