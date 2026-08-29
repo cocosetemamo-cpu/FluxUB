@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔥 FluxUB - USB Bridge</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🔥</span>
+                <h1>FluxUB</h1>
+            </div>
+            <p class="subtitle">USB → WiFi → Bluetooth Bridge</p>
+            <p class="version">v1.0</p>
+        </header>
+
+        <div class="status-card" id="statusCard">
+            <div class="status-indicator" id="statusIndicator"></div>
+            <span id="statusText">⏳ Conectando...</span>
+        </div>
+
+        <div class="panel">
+            <h2>📦 Dispositivos USB</h2>
+            <ul id="usbList" class="device-list">
+                <li class="loading">🔍 Escaneando...</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <button id="btnSync" class="btn btn-success" disabled>
+                🔗 Sincronizar
+            </button>
+            <button id="btnDesync" class="btn btn-danger" disabled>
+                ⏹️ Desincronizar
+            </button>
+        </div>
+
+        <div class="panel">
+            <h2>📊 Eventos en tiempo real</h2>
+            <div id="eventDisplay" class="event-display">
+                <div class="event-empty">⏳ Esperando eventos...</div>
+            </div>
+            <div class="event-stats">
+                <span id="eventCount">0</span> eventos recibidos
+            </div>
+        </div>
+
+        <div class="info">
+            <span class="badge">🖥️ PC</span>
+            <span class="arrow">➡️</span>
+            <span class="badge">📶 WiFi</span>
+            <span class="arrow">➡️</span>
+            <span class="badge">📱 Celular</span>
+            <span class="arrow">➡️</span>
+            <span class="badge">🎮 Bluetooth</span>
+        </div>
+
+        <footer>
+            <a href="https://github.com/tuusuario/FluxUB" target="_blank">GitHub</a>
+            <span>•</span>
+            <span>MIT License</span>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
